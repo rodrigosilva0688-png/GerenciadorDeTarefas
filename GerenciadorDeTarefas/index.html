@@ -1,0 +1,95 @@
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <h1>Gerenciador de Tarefas</h1>
+
+    <section>
+      <h2>Cadastrar tarefa</h2>
+
+      <form id="formTarefa">
+        <label for="descricaoTarefa">Descrição da tarefa:</label>
+        <input type="text" id="descricaoTarefa" />
+
+        <label for="categoria">Categoria:</label>
+        <select id="categoria">
+          <option value="">Selecione uma categoria</option>
+          <option>Estudos</option>
+          <option>Trabalho</option>
+          <option>Pessoal</option>
+          <option>Casa</option>
+        </select>
+
+        <label for="prioridade">Prioridade:</label>
+        <select id="prioridade">
+          <option value="">Selecione uma prioridade</option>
+          <option>Alta</option>
+          <option>Média</option>
+          <option>Baixa</option>
+        </select>
+
+        <label for="dataLimite">Data de conclusão:</label>
+        <input type="date" id="dataLimite" />
+
+        <button type="submit" id="btnAdicionar">
+          Adicionar
+        </button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Filtros</h2>
+
+      <div class="grupoFiltros">
+        <div class="filtro">
+          <label for="filtroStatus">Status:</label>
+          <select id="filtroStatus">
+            <option>Todas</option>
+            <option>Pendentes</option>
+            <option>Concluídas</option>
+          </select>
+        </div>
+
+        <div class="filtro">
+          <label for="filtroCategoria">Categoria:</label>
+          <select id="filtroCategoria">
+            <option>Todas</option>
+            <option>Estudos</option>
+            <option>Trabalho</option>
+            <option>Pessoal</option>
+            <option>Casa</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section id="resumo">
+      <h2>Resumo</h2>
+
+      <div id="indicadores">
+        <p>Total de tarefas: <span id="totalTarefas">0</span></p>
+        <p>Tarefas pendentes: <span id="tarefasPendentes">0</span></p>
+        <p>Tarefas concluídas: <span id="tarefasConcluidas">0</span></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tarefas cadastradas</h2>
+
+      <p id="mensagemVazia">
+        Nenhuma tarefa cadastrada. Adicione uma tarefa para começar!
+      </p>
+
+      <div id="listaTarefas"></div>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
